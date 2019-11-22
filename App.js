@@ -11,7 +11,7 @@ import LoginView from './src/LoginView';
 import HomeView from './src/HomeView';
 import ArtistDetailView from './src/ArtistDetailView';
 import {Actions, Scene, Router} from 'react-native-router-flux';
-
+//hola
 const scenes = Actions.create( 
   <Scene key="root">
     <Scene key="Login" component={LoginView} hideNavBar/>
