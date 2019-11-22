@@ -1,12 +1,12 @@
 const URL = 'https://mobile-api-ucol.herokuapp.com/'
 
-function getToken(email, password){
-    return fetch(`${URL}login`, {
-    method: 'POST',
-    headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-    },
+function getToken (email, password){
+    return fetch(`${URL}login`,{
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
             email: email,
             password: password,
@@ -17,9 +17,8 @@ function getToken(email, password){
         return data
     })
 }
-
-function getMusicData() {
-    return fetch(`${URL}music_data`, {
+function getMusicData(){
+    return fetch(`${URL}music_data`,{
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -35,7 +34,7 @@ function getMusicData() {
         return {
             id: artist.mbid,
             name: artist.name,
-            image: arist.image[3]['#text'],
+            image: artist.image[3]['#text'],
             likes: 200,
             comments: 140
         }
